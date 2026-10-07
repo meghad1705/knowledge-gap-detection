@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Workspace | Performance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span>student workspace</span></a>
+      <p class="eyebrow">YOUR SPACE</p>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-item active" href="index.html"><span>◈</span> Overview <small>Analytics</small></a>
+        <a class="nav-item" href="pages/quiz.html"><span>✓</span> Quizzes <small>Assessment</small></a>
+        <a class="nav-item" href="pages/communication.html"><span>◉</span> Communication test <small>Speaking</small></a>
+        <a class="nav-item" href="pages/videos.html"><span>▶</span> Video library <small>Content</small></a>
+        <a class="nav-item" href="pages/ai_tutor.html"><span>✦</span> AI tutor <small>Recommendations</small></a>
+        <a class="nav-item" href="pages/scaling.html"><span>↗</span> Skill map <small>Knowledge gaps</small></a>
+        <a class="nav-item" href="pages/history.html"><span>≡</span> History <small>Data activity</small></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a class="nav-item" href="pages/profile.html"><span>◎</span> Profile</a>
+        <div class="streak-card"><span class="streak-icon">✹</span><div><strong>4 day streak</strong><small>Keep the momentum.</small></div></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="mobile-brand">student workspace</div><div class="topbar-actions"><div class="topbar-status"><span class="status-dot"></span><span>Cohort view</span><small>100 students</small></div><button class="icon-button" aria-label="Notifications">♢</button><div class="avatar">100</div></div></header>
+      <section class="welcome-row"><div><p class="eyebrow accent">THURSDAY, 28 AUGUST 2026</p><h1>Student cohort overview<span class="sun">✦</span></h1><p class="muted">Track progress and identify students who need a little more support.</p></div><button class="primary-button" id="startQuiz">Start a quiz <span>↗</span></button></section>
+
+      <section class="study-strip" aria-label="Today's learning route"><div class="route-marker"><span>01</span><i></i><span>02</span><i></i><span>03</span></div><div class="route-copy"><p class="eyebrow">TODAY'S ROUTE</p><strong>Warm up · Practice · Reflect</strong><p class="muted">A 25 minute path built around your current gaps.</p></div><div class="route-tags"><span>25 MIN</span><span>3 TOPICS</span></div></section>
+
+      <section class="stats-grid" aria-label="Cohort progress">
+        <article class="stat-card cream"><div class="stat-label">AVERAGE MASTERY <span>ⓘ</span></div><strong><span id="masteryValue">78</span><span>%</span></strong><div class="progress-track"><i id="masteryProgress" style="width:78%"></i></div><small>Across 100 students</small></article>
+        <article class="stat-card lavender"><div class="stat-label">QUIZ ACCURACY <span>ⓘ</span></div><strong><span id="accuracyValue">84</span><span>%</span></strong><div class="mini-bars"><i style="height:45%"></i><i style="height:62%"></i><i style="height:52%"></i><i style="height:82%"></i><i style="height:70%"></i><i class="current" style="height:92%"></i></div><small>Latest cohort average</small></article>
+        <article class="stat-card peach"><div class="stat-label">LEARNING TIME <span>ⓘ</span></div><strong><span id="hoursValue">6.4</span><span>h</span></strong><div class="stat-meta"><span>Per student</span><span id="hoursPercent">80%</span></div><div class="progress-track"><i id="hoursProgress" style="width:80%"></i></div><small>Average weekly activity</small></article>
+      </section>
+
+      <section class="content-grid"><article class="panel mastery-panel"><div class="panel-heading"><div><p class="eyebrow">UNDERSTANDING AT A GLANCE</p><h2>Student performance</h2></div><button class="text-button">100 students</button></div><div class="subject-list" id="studentMastery" aria-live="polite"><p class="muted">Loading the cohort...</p></div></article>
+        <article class="panel focus-panel"><div class="panel-heading"><div><p class="eyebrow">PERSONALIZED FOR YOU</p><h2>Focus next</h2></div><span class="spark">✦</span></div><div class="focus-illustration"><span>∫</span><span>△</span><span>π</span><span>∑</span></div><p class="focus-title">Quadratic equations</p><p class="muted">You’re close. One focused session could unlock this topic.</p><div class="focus-actions"><button class="secondary-button" id="practiceTopic">Practice this topic <span>→</span></button><button class="secondary-button secondary-button-light" id="viewResultButton">View result <span>↗</span></button></div></article></section>
+
+      <section class="bottom-grid"><article class="panel activity-panel"><div class="panel-heading"><div><p class="eyebrow">LAST 7 DAYS</p><h2>Learning activity</h2></div><span class="activity-total">4h 18m</span></div><div class="chart" aria-label="Learning activity chart"><div class="chart-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div><div class="chart-bars"><i style="height:44%"></i><i style="height:70%"></i><i style="height:58%"></i><i class="today" style="height:86%"></i><i style="height:48%"></i><i style="height:64%"></i><i style="height:30%"></i></div></div></article><article class="panel next-panel"><div class="panel-heading"><div><p class="eyebrow">UP NEXT</p><h2>Continue learning</h2></div><span class="play-circle">▶</span></div><div class="lesson"><div class="lesson-art">02</div><div><strong>Newton’s laws of motion</strong><small>Physics · 12 min video</small></div><button class="icon-button">→</button></div><div class="lesson"><div class="lesson-art alt">03</div><div><strong>Arrays & time complexity</strong><small>Computer Science · Quiz</small></div><button class="icon-button">→</button></div></article></section>
+      <footer>Student learning workspace <span>•</span> Built for curious minds</footer>
+    </main>
+  </div>
+
+  <div class="result-modal hidden" id="resultModal" aria-hidden="true">
+    <div class="result-modal-backdrop" data-close="true"></div>
+    <div class="result-modal-card" role="dialog" aria-modal="true" aria-labelledby="resultModalTitle">
+      <div class="result-modal-header">
+        <div>
+          <p class="eyebrow accent">QUIZ REVIEW</p>
+          <h2 id="resultModalTitle">Quadratic equations</h2>
+        </div>
+        <button class="icon-button modal-close" id="closeResultModal" aria-label="Close review">✕</button>
+      </div>
+      <div class="result-score-row">
+        <div><span class="result-score-label">Score</span><strong id="resultScore">6 / 8</strong></div>
+        <span class="result-badge" id="resultBadge">Strong</span>
+      </div>
+      <div class="result-list" id="resultList"></div>
+    </div>
+  </div>
+
+  <script>
+    if (!sessionStorage.getItem('student')) {
+      window.location.replace('login.html');
+    }
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>

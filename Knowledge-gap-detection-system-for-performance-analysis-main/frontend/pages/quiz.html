@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz | Student Workspace</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<main class="main-content quiz-page">
+		<header class="topbar"><a class="brand" href="../index.html"><span class="brand-mark">S</span><span>student workspace</span></a></header>
+		<section class="welcome-row"><div><p class="eyebrow accent">PRACTICE SESSION</p><h1>Quadratic equations</h1><p class="muted">A focused set of questions based on your recent progress.</p></div><a class="secondary-button communication-link" href="communication.html">Communication test <span>↗</span></a></section>
+		<div class="quiz-subject-picker"><label for="quizSubject">QUIZ SUBJECT</label><select id="quizSubject"><option>Loading subjects...</option></select></div>
+		<article class="panel quiz-card" id="quizCard">
+			<div class="quiz-topline"><p class="eyebrow" id="questionCount">QUESTION 1 OF 8</p><span class="quiz-score" id="quizScore">0 correct</span></div>
+			<div class="quiz-progress"><i id="quizProgress"></i></div>
+			<h2 id="questionText">What is the value of x in x² - 5x + 6 = 0?</h2>
+			<div class="answer-list" id="answerList"></div>
+			<div class="quiz-feedback" id="quizFeedback" aria-live="polite"></div>
+			<button class="primary-button quiz-next" id="quizNext" disabled>Choose an answer <span>→</span></button>
+		</article>
+	</main>
+	<script src="../js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student login | Student Workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-shell" aria-labelledby="loginTitle">
+      <div class="login-intro">
+        <a class="login-brand" href="login.html"><span class="brand-mark">S</span><span>student workspace</span></a>
+        <div>
+          <p class="eyebrow accent">LEARNING HUB</p>
+          <h1>Your progress has a place.</h1>
+          <p class="muted">Sign in with your student ID to continue learning, review your performance, and build your next study route.</p>
+        </div>
+        <div class="login-route"><span>TRACK</span><i></i><span>PRACTICE</span><i></i><span>GROW</span></div>
+      </div>
+      <div class="login-form-panel">
+        <form class="login-form" id="loginForm" novalidate>
+          <p class="eyebrow accent">WELCOME BACK</p>
+          <h2 id="loginTitle">Student login</h2>
+          <p class="muted">Enter your student ID to open your workspace.</p>
+          <label for="studentId">Student ID</label>
+          <input id="studentId" name="studentId" type="number" min="1" max="100" inputmode="numeric" placeholder="Example: 24" autocomplete="off" required>
+          <button class="primary-button login-submit" type="submit">Continue <span>→</span></button>
+          <p class="login-error" id="loginError" role="alert" aria-live="polite"></p>
+          <p class="login-help">Use the ID assigned to you by your learning administrator.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="js/login.js"></script>
+</body>
+</html>

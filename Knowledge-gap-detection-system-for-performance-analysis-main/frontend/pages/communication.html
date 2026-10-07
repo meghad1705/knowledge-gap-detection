@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Communication Test | Student Workspace</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<main class="main-content quiz-page communication-page">
+		<header class="topbar"><a class="brand" href="../index.html"><span class="brand-mark">S</span><span>student workspace</span></a></header>
+		<section class="welcome-row"><div><p class="eyebrow accent">SPEAKING ASSESSMENT</p><h1>Communication test</h1><p class="muted">Answer a subject question aloud and receive a keyword-based communication score.</p></div><a class="secondary-button communication-link" href="quiz.html">Multiple-choice quiz <span>↗</span></a></section>
+		<div class="quiz-subject-picker"><label for="communicationSubject">TEST SUBJECT</label><select id="communicationSubject"><option>Loading subjects...</option></select></div>
+		<article class="panel communication-card" id="communicationCard">
+			<div class="panel-heading communication-heading">
+				<div>
+					<p class="eyebrow accent">SPEAK YOUR ANSWER</p>
+					<h2 id="communicationTitle">Explain your thinking clearly</h2>
+				</div>
+			</div>
+			<div class="communication-module">
+				<p class="communication-label">Subject prompt</p>
+				<h3 id="communicationPrompt">Explain how to solve a quadratic equation by factoring.</h3>
+				<div class="speech-controls">
+					<button class="secondary-button speech-button" id="speechStart" type="button">Tap to speak <span>🎤</span></button>
+					<button class="text-button speech-clear" id="speechClear" type="button">Clear</button>
+					<span class="recording-timer" id="recordingTimer">00:00 / 02:00</span>
+				</div>
+				<textarea id="speechTranscript" rows="5" placeholder="Your spoken answer will appear here..."></textarea>
+				<div class="communication-score" id="communicationScore">Awaiting response</div>
+				<div class="communication-summary" id="communicationSummary">Speak clearly and include the key ideas from the prompt.</div>
+			</div>
+		</article>
+	</main>
+	<script src="../js/communication.js"></script>
+</body>
+</html>
